@@ -1,0 +1,73 @@
+{
+    "name": "uni-project",
+    "version": "1.0.0",
+    "description": "",
+    "main": "main.ts",
+    "scripts": {
+        "prepare": "husky install",
+        "prettier": "prettier --write '**/*.{js,jsx,tsx,ts,vue,md,json,css,scss}'"
+    },
+    "lint-staged": {
+        "**/*.{js,jsx,ts,tsx,vue,md,json,scss,css,json}": [
+            "prettier --write"
+        ]
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@dcloudio/types": "^3.4.12",
+        "@types/node": "^22.5.0",
+        "@uni-helper/uni-app-types": "^1.0.0-alpha.3",
+        "@uni-helper/uni-ui-types": "^1.0.0-alpha.3",
+        "@vue/tsconfig": "^0.5.1",
+        "husky": "8.0.0",
+        "lint-staged": "15.2.0",
+        "prettier": "3.2.5",
+        "vue-tsc": "^2.0.29"
+    },
+    "uni-app": {
+        "scripts": {
+            "h5-dev": {
+                "title": "h5开发环境",
+                "env": {
+                    "UNI_PLATFORM": "h5",
+                    "APP_ENV": "dev"
+                }
+            },
+            "h5-prod": {
+                "title": "h5生产环境",
+                "env": {
+                    "UNI_PLATFORM": "h5",
+                    "APP_ENV": "prod"
+                }
+            },
+            "mp-weixin-dev": {
+                "title": "小程序开发环境",
+                "env": {
+                    "UNI_PLATFORM": "mp-weixin",
+                    "APP_ENV": "dev"
+                }
+            },
+            "mp-weixin-test": {
+                "title": "小程序测试环境",
+                "env": {
+                    "UNI_PLATFORM": "mp-weixin",
+                    "APP_ENV": "test"
+                }
+            }
+        }
+    },
+    "dependencies": {
+        "@dcloudio/uni-ui": "^1.5.6",
+        "dayjs": "^1.11.13",
+        "js-base64": "^3.7.7",
+        "lodash-es": "^4.17.21",
+        "mathjs": "^13.0.3",
+        "nanoid": "^5.0.7",
+        "object-hash": "^3.0.0",
+        "pinia": "^2.2.2",
+        "pinia-plugin-persistedstate": "^3.2.1",
+        "qs": "^6.13.0"
+    }
+}
